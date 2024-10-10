@@ -1,0 +1,310 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-screen background video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keep video in the background */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+}
+
+/* Overlaying content */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Set default text color */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+}
+
+/* Center the content with some spacing */
+.content {
+    position: relative;
+    text-align: left;
+    color: #ffffff; /* Visible text color */
+    margin-top: 90px; /* Spacing from top */
+}
+
+.content h3 {
+    margin: 10px 0; /* Space between heading and paragraph */
+}
+
+.content p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+
+
+
+
+
+
+.home-header {
+    font-size: 2.5rem; /* Adjust the size of the font */
+    color: #fff; /* Default text color */
+    margin: 20px 0; /* Add vertical spacing above and below */
+    text-align: center; /* Center align the text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow effect for depth */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    transition: color 0.5s ease; /* Smooth transition for color change */
+}
+
+.home-header:hover {
+    color: #ff6347; /* Change color on hover (tomato) */
+}
+
+
+
+
+
+
+
+.typing {
+    display: inline-block;
+    overflow: hidden; /* Ensures that the text will not overflow */
+    border-right: .15em solid rgba(255, 255, 255, 0.75); /* Creates a cursor effect */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    animation: typing 4s steps(10), blink-caret 0.75s step-end infinite; /* Typing and blinking animations */
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Starts from 0 width */
+    }
+    to {
+        width: 100%; /* Expands to full width */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Invisible border */
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.75); /* Visible border color */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- CSS Styles -->
+    <style>
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1535378917043-645f296a9e42'); /* Abstract cityscape background */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        
+        .contact h3 {
+            color: #ffffff;
+        }
+    
+        .contact p {
+            margin: 5px 0;
+            color: #ffffff;
+        }
+        
+        .contact i {
+            margin-right: 10px;
+            color: royalblue;
+            font-size: 2rem;
+        }
+    
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            color: blue;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7;
+        }
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+/* Home Image */
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    overflow: hidden;
+    width: 200vh;
+}
+
+.home-img img {
+    transition: transform 0.3s ease;
+    animation: rainbow-glow 1.5s infinite alternate; /* Continuous rainbow glow animation */
+    border-radius: 50%;
+    width: 12vw;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
+}
+
+/* Rainbow glowing effect */
+@keyframes rainbow-glow {
+    0% {
+        box-shadow: 0 0 15px red;
+    }
+    14% {
+        box-shadow: 0 0 25px orange;
+    }
+    28% {
+        box-shadow: 0 0 35px yellow;
+    }
+    42% {
+        box-shadow: 0 0 45px green;
+    }
+    57% {
+        box-shadow: 0 0 55px blue;
+    }
+    71% {
+        box-shadow: 0 0 65px indigo;
+    }
+    85% {
+        box-shadow: 0 0 75px violet;
+    }
+    100% {
+        box-shadow: 0 0 15px red; /* Loop back to red */
+    }
+}
+
+/* Body styling */
+body {
+    background-image: url(/Project/image/elias.jpg.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Header Styling */
+header {
+    background-color: #001F3F;
+    color: rgb(47, 255, 0);
+    padding: 38px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #001F3F;
+    color: white;
+    text-align: center;
+    padding: 38px;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+/* Contact Icons Styling */
+.contact i {
+    margin-right: 10px;
+    color: yellow;
+    font-size: 38px;
+}
