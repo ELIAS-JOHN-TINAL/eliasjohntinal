@@ -16,6 +16,12 @@
 
 
 
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Full-screen background video */
 .video-container {
@@ -38,6 +44,155 @@
 .content {
     position: relative;
     z-index: 1;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+}
+
+.content h3 {
+    margin: 2px 0;
+}
+
+.content p {
+    margin: 5px 0;
+    color: yellow;
+}
+
+
+
+
+
+
+
+/* Responsive typography for different screen sizes */
+@media only screen and (max-width: 768px) {
+    .content h3 {
+        font-size: 1.2rem;
+    }
+    .home-header {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .content h3 {
+        font-size: 1rem;
+    }
+    .home-header {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile menu styling */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Center the content with some spacing */
+.content {
+    position: relative;
+    text-align: left;
+    margin-top: 90px;
+}
+
+.home-header {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 1px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.home-header:hover {
+    color: red;
+}
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    animation: typing 4s steps(10), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-screen background video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keep video in the background */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+}
+
+
+
+/* Overlaying content */
+.content {
+    padding: 20px;
+    margin-top: 50px; /* Adjust margin for smaller screens */
+    font-size: 1.2rem; /* Responsive font size */
+}
+
+
+
+
+.content {
+    position: relative;
+    z-index: 1;
     color: white; /* Set default text color */
     text-align: center;
     font-family: Arial, sans-serif;
@@ -46,7 +201,7 @@
     transform: translateY(-50%);
 }
 
-h1 {
+.h1 {
     font-size: 3rem;
 }
 
@@ -64,31 +219,29 @@ p {
 }
 
 .content h3 {
-    margin: 10px 0; /* Space between heading and paragraph */
+    margin: 2px 0; /* Space between heading and paragraph */
+    
 }
 
 .content p {
     margin: 5px 0; /* Space between paragraphs */
+    color: yellow;
 }
-
-
-
-
 
 
 
 .home-header {
-    font-size: 2.5rem; /* Adjust the size of the font */
-    color: #fff; /* Default text color */
-    margin: 20px 0; /* Add vertical spacing above and below */
-    text-align: center; /* Center align the text */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow effect for depth */
-    font-family: 'Arial', sans-serif; /* Use a clean font */
-    transition: color 0.5s ease; /* Smooth transition for color change */
+    font-size: 1.5rem; /*Adjustthesizeofthefont*/
+    color: #fff; /*Defaulttextcolor*/
+    margin: 0 1px; /*Addverticalspacingaboveandbelow*/
+    text-align: center; /*Centeralignthetext*/
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /*Addashadoweffectfordepth*/
+    font-family: 'Arial', sans-serif; /*Useacleanfont*/
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .home-header:hover {
-    color: #ff6347; /* Change color on hover (tomato) */
+    color: red; /* Change color on hover (tomato) */
 }
 
 
@@ -99,10 +252,11 @@ p {
 
 .typing {
     display: inline-block;
-    overflow: hidden; /* Ensures that the text will not overflow */
-    border-right: .15em solid rgba(255, 255, 255, 0.75); /* Creates a cursor effect */
-    white-space: nowrap; /* Prevents the text from wrapping */
-    animation: typing 4s steps(10), blink-caret 0.75s step-end infinite; /* Typing and blinking animations */
+    overflow: hidden;
+    /*Ensuresthatthetextwillnotoverflow*/border-right: .15em solid rgba(255, 255, 255, 0.75);
+    /*Createsacursoreffect*/white-space: nowrap;
+    /*Preventsthetextfromwrapping*/animation: typing 4s steps(10), blink-caret 0.75s step-end infinite;
+    /*Typingandblinkinganimations*/
 }
 
 @keyframes typing {
@@ -123,39 +277,11 @@ p {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- CSS Styles -->
-    <style>
+    
         .contact {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 90px;
             color: white;
             padding: 20px;
             background-image: url('https://images.unsplash.com/photo-1535378917043-645f296a9e42'); /* Abstract cityscape background */
@@ -165,68 +291,124 @@ p {
         }
         
         .contact h3 {
-            color: #ffffff;
+            color: greenyellow;
+            padding: 10px;
+        
         }
     
         .contact p {
             margin: 5px 0;
-            color: #ffffff;
+            color: yellow;
+                
         }
+
+       /* Contact Icons Styling */
+.contact i {
+    margin-right: 50px;
+    color: orange;
+    font-size: 45px;
+
+   text-align: center;
+    padding: 18px;
+    margin-bottom: px;
+    margin-top: 12px;
+}
         
-        .contact i {
-            margin-right: 10px;
-            color: royalblue;
-            font-size: 2rem;
-        }
-    
-        .social-icons a {
+ .social-icons a {
             margin: 0 10px;
             font-size: 2rem;
             text-decoration: none;
             transition: color 0.3s;
-            color: blue;
-        }
-
+            color: red;
+ }
         .social-icons a:hover {
             opacity: 0.7;
+
         }
 
+social-media a {
+        font-size: 2rem; /* Adjust icon size */
+        margin: 0 10px; /* Add some space between icons */
+        text-decoration: none;
+    }
+    
+.header5 {
+        margin: 5px 0;
+        color: yellow;
+            
+    }
 
-    </style>
+
+
+
+/* Main content styling */
+.main.home-content{
+    padding: 20px;
+    margin-top: 100px; /* To push the content below the header */
+}
 
 
 
 
 
 
+/* Body styling */
+body {
+    background-image: url('<img src="/Project/image/elias.jpg" alt="Elias John Image" class="">'); /*('/Project/image/elias.jpg.jpg');*/
+    background-size: cover; /* Ensure the background covers the entire screen */
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif;
+    <!-- Add scrollbar to body -->
+    margin: 0;
+    padding: 0;
+    height: 90vh; /* Viewport height */
+    overflow-y: scroll;/* Adds a scroll bar */
+}
+/* Alternatively, limit the height of a specific section to enable scroll */
+section {
+    max-height: 100vh;
+     /* Enables scroll inside the section */
+    padding: 20px;
+}
+   
 
 
 
-/* Home Image */
+/* Main content area styling */
+.main.home-content{
+    padding: 20px;
+    margin-top: 100px; /* Push the content down to avoid overlapping the header */
+}
+
+/* Home image inside the content page */
 .home-img {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  /* Center the image horizontally in the content */
+    align-items:center;
     height: 50vh;
     overflow: hidden;
-    width: 200vh;
+    max-width: 10vh;
+    margin: 0 auto; /* Ensure the home image is centered in the main content */
 }
 
 .home-img img {
     transition: transform 0.3s ease;
-    animation: rainbow-glow 1.5s infinite alternate; /* Continuous rainbow glow animation */
-    border-radius: 50%;
-    width: 12vw;
+    animation: rainbow-glow 1.5s infinite alternate;
+    border-radius: 110%;
+    width: 5vw;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
+    -webkit-animation: rainbow-glow 1.5s infinite alternate;
 }
 
 .home-img img:hover {
     transform: scale(1.1);
 }
 
-/* Rainbow glowing effect */
-@keyframes rainbow-glow {
+
+
+
+.@keyframes rainbow-glow {
     0% {
         box-shadow: 0 0 15px red;
     }
@@ -253,20 +435,14 @@ p {
     }
 }
 
-/* Body styling */
-body {
-    background-image: url(/Project/image/elias.jpg.jpg);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
+
+
 
 /* Header Styling */
 header {
-    background-color: #001F3F;
-    color: rgb(47, 255, 0);
-    padding: 38px;
+    background-color: #333;
+    padding: 30px;
+    width: 100%;
 }
 
 nav ul {
@@ -283,7 +459,7 @@ nav ul li {
 nav ul li a {
     color: yellow;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 nav ul li a:hover {
@@ -291,20 +467,123 @@ nav ul li a:hover {
     color: red;
 }
 
+
+
+
+
+.navbar a i {
+    color: #000; /* Default icon color */
+}
+
+.navbar a:hover i {
+    color: #FF5733; /* Color on hover */
+}
+
+/* Specific colors for each icon */
+.navbar a[href="home.html"] i {
+    color: #007BFF; /* Home icon color */
+}
+
+.navbar a[href="about.html"] i {
+    color: #28A745; /* About icon color */
+}
+
+.navbar a[href="project.html"] i {
+    color: #FFC107; /* Project icon color */
+}
+
+.navbar a[href="contact.html"] i {
+    color: #DC3545; /* Contact icon color */
+}
+
+
+
+
+
+
+
+/* Styling the navigation bar */
+.navbar {
+    background-color: #333; /* Dark background color */
+    overflow: hidden;
+    position: fixed; /* Sticks the navbar to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Evenly distribute links */
+    align-items: center;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #ddd; /* Light background on hover */
+    color: black;
+}
+
+
+
+
+
+
+footer {
+
+    background-color: #f8f8f8; /* Light background color */
+    padding: 20px; /* Padding for space */
+    text-align: center; /* Centered text */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space out items */
+    flex-wrap: wrap; /* Wrap items on small screens */
+}
+
+.footer-container div {
+    flex: 1; /* Equal width for each section */
+    margin: 10px; /* Spacing between sections */
+}
+
+.footer-container a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text color */
+}
+
+.footer-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
+
 /* Footer Styling */
 footer {
     background-color: #001F3F;
     color: white;
     text-align: center;
-    padding: 38px;
+    padding: 3px;
     position: absolute;
     bottom: 0%;
     width: 100%;
 }
 
-/* Contact Icons Styling */
-.contact i {
-    margin-right: 10px;
-    color: yellow;
-    font-size: 38px;
-}
