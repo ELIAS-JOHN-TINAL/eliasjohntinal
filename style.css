@@ -381,29 +381,18 @@ section {
 }
 
 /* Home image inside the content page */
-.home-img {
-    display: flex;
-    justify-content: center;  /* Center the image horizontally in the content */
-    align-items:center;
-    height: 50vh;
-    overflow: hidden;
-    max-width: 10vh;
-    margin: 0 auto; /* Ensure the home image is centered in the main content */
+.home-img img{
+    position:absolute;
+    justify-content: center;
+   height: 40%;
+   width: 30%;
+   bottom: 190px;
+   
+    size: 200px;
+    border-radius:50%;
+    
 }
 
-.home-img img {
-    transition: transform 0.3s ease;
-    animation: rainbow-glow 1.5s infinite alternate;
-    border-radius: 110%;
-    width: 5vw;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    -webkit-animation: rainbow-glow 1.5s infinite alternate;
-}
-
-.home-img img:hover {
-    transform: scale(1.1);
-}
 
 
 
@@ -440,7 +429,7 @@ section {
 
 /* Header Styling */
 header {
-    background-color: #333;
+    background-color: #001F3F;
     padding: 30px;
     width: 100%;
 }
@@ -472,16 +461,16 @@ nav ul li a:hover {
 
 
 .navbar a i {
-    color: #000; /* Default icon color */
+    color: #000;
 }
 
 .navbar a:hover i {
-    color: #FF5733; /* Color on hover */
+    color: #FF5733;
 }
 
 /* Specific colors for each icon */
 .navbar a[href="home.html"] i {
-    color: #007BFF; /* Home icon color */
+    color: #007BFF;
 }
 
 .navbar a[href="about.html"] i {
@@ -504,9 +493,9 @@ nav ul li a:hover {
 
 /* Styling the navigation bar */
 .navbar {
-    background-color: #333; /* Dark background color */
+    background-color: #333; 
     overflow: hidden;
-    position: fixed; /* Sticks the navbar to the top */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -517,7 +506,7 @@ nav ul li a:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around; /* Evenly distribute links */
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -536,7 +525,7 @@ nav ul li a:hover {
 }
 
 .navbar ul li a:hover {
-    background-color: #ddd; /* Light background on hover */
+    background-color: #ddd;
     color: black;
 }
 
@@ -547,29 +536,29 @@ nav ul li a:hover {
 
 footer {
 
-    background-color: #f8f8f8; /* Light background color */
-    padding: 20px; /* Padding for space */
-    text-align: center; /* Centered text */
+    background-color: #f8f8f8;
+    padding: 20px; 
+    text-align: center;
 }
 
 .footer-container {
-    display: flex; /* Flexbox for layout */
-    justify-content: space-around; /* Space out items */
-    flex-wrap: wrap; /* Wrap items on small screens */
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer-container div {
-    flex: 1; /* Equal width for each section */
-    margin: 10px; /* Spacing between sections */
+    flex: 1;
+    margin: 10px; 
 }
 
 .footer-container a {
-    text-decoration: none; /* Remove underline */
-    color: #333; /* Dark text color */
+    text-decoration: none;
+    color: #333;
 }
 
 .footer-container a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 
